@@ -1,0 +1,17 @@
+let smallestMultiple = () => {
+    let dividend = 1;
+
+    for(let divisor = 1; divisor <= 20; divisor++){
+        if(dividend%divisor !== 0){
+            dividend = dividend + 1;
+            divisor = 0;
+        } else if (dividend%divisor === 0 && divisor === 20){
+            break
+        }
+    }
+    return dividend
+    
+}
+
+console.log(smallestMultiple())
+
